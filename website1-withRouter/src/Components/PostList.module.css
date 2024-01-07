@@ -1,0 +1,7 @@
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 1rem;
+  max-width: 100rem;
+  justify-content: center;
+}

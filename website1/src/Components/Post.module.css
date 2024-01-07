@@ -1,0 +1,13 @@
+.post {
+  background-color: cornsilk;
+}
+
+.author {
+  color: blue;
+  font-weight: bold;
+}
+
+.book {
+  color: cornflowerblue;
+  font-style: italic;
+}
