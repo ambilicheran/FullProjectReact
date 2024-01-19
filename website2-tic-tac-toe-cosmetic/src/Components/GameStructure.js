@@ -154,11 +154,7 @@ function GameStructure() {
           {/* Congratulations message for a win */}
           {win && <h2>Congratulations {possibleWinner}! You have won!</h2>}
           {/* Game Over message when all moves have been used up and no win found */}
-          {!win && gameOver && (
-            <h2>
-              Game Over!Game Over!Game Over!Game Over!Game Over!Game Over!
-            </h2>
-          )}
+          {!win && gameOver && <h2>Game Over!</h2>}
           {/* To enable a button to restart the game if the game is over or a win has been found */}
           {(win || gameOver) && (
             <button className={classes.playagain} onClick={playAgainHandler}>
