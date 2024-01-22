@@ -1,4 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, {
+  useRef,
+  useEffect,
+} from "../../website3-freelancer/node_modules/@types/react/ts5.0";
 import classes from "./App.module.css";
 
 function App() {
