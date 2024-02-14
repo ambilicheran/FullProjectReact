@@ -1,0 +1,66 @@
+.navContainer {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  line-height: 45px;
+}
+
+.navContainerShrink {
+  line-height: 10px;
+  font-size: 0.5rem;
+}
+
+.navbar {
+  background-color: rgb(44, 62, 80);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+}
+
+.navMenuList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBrandNameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+}
+
+.navBrandName {
+  font-size: 2.19rem;
+  font-weight: 500;
+  white-space: nowrap;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+}
+
+.navBrandNameShrink {
+  font-size: 1rem;
+}
+
+.navItem {
+  cursor: pointer;
+  padding-left: 3.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+  color: rgb(26, 188, 156);
+}

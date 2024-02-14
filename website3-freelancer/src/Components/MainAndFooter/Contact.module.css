@@ -1,0 +1,57 @@
+.contactContainer {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.formContainer {
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.label {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: rgb(44, 62, 80);
+  opacity: 0.7;
+}
+
+.textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  color: rgb(44, 62, 80);
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.bottomLine {
+  background-color: rgb(44, 62, 80, 0.3);
+  height: 2px;
+  margin-bottom: 2rem;
+}
+
+.sendButton {
+  font-size: 1.6rem;
+  color: white;
+  background-color: rgb(26, 188, 156);
+  padding-right: 2.25rem;
+  padding-left: 2.25rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: white solid 3px;
+  cursor: pointer;
+}
+
+.sendButtonContainer {
+  display: flex;
+  padding-left: 2rem;
+}

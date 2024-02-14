@@ -1,0 +1,63 @@
+.footerContainer {
+  background-color: rgb(44, 62, 80);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.webIcons {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: white;
+}
+
+.webIconsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aroundthewebContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.aboutfreelancerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.footerText {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: white;
+}
+
+.link {
+  color: rgb(26, 188, 156);
+}

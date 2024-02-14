@@ -1,0 +1,38 @@
+.label {
+  font-weight: 500;
+  color: rgb(44, 62, 80);
+  opacity: 0.7;
+  font-size: 1.8rem;
+}
+
+.input {
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: rgb(44, 62, 80);
+}
+
+.bottomLine {
+  background-color: rgb(44, 62, 80);
+  height: 2px;
+  margin-bottom: 0.5rem;
+  opacity: 0.3;
+}
+
+.input::placeholder {
+  opacity: 0.3;
+}
+
+h4 {
+  color: red;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
