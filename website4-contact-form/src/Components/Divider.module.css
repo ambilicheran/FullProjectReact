@@ -1,0 +1,12 @@
+.dividerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.line {
+  height: 5px;
+  width: 9rem;
+  margin: 1rem;
+}
