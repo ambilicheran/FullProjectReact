@@ -2,6 +2,7 @@ import Divider from "./Divider";
 import classesContact from "./Contact.module.css";
 import InputWithLabel from "./InputWithLabel";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -11,27 +12,17 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [errorPhone, setErrorPhone] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
-  const [isSubmitValid, setIsSubmitValid] = useState(true)
 
-  const nameChangeHandler = (event) => {
-    setName(event.target.value);
-    validateForm();
-  }
-  const onBlurNameHandler = () => {
+  const validateName = () => {
     if (!name.trim()) {
       setErrorName("A name is required.");
     }
     else {
       setErrorName("");
     }
-    validateForm();
   }
 
-  const emailChangeHandler = (event) => {
-    setEmail(event.target.value);
-    validateForm();
-  }
-  const onBlurEmailHandler = () => {
+  const validateEmail = () => {
     const emailRegex = /^[^\s@]+@+[^\s@]+\.+[^\s@]+$/;
     if (!email.trim()) {
       setErrorEmail("E-mail is required.")
@@ -42,14 +33,9 @@ const Contact = () => {
     else {
       setErrorEmail("");
     }
-    validateForm();
   }
 
-  const phoneChangeHandler = (event) => {
-    setPhone(event.target.value);
-    validateForm();
-  }
-  const onBlurPhoneHandler = () => {
+  const validatePhone = () => {
     const phoneRegex = /^\d{10}$/;
     if (!phone.trim()) {
       setErrorPhone("Phone number is required.")
@@ -60,16 +46,36 @@ const Contact = () => {
     else {
       setErrorPhone("");
     }
-    validateForm();
+  }
+
+  const nameChangeHandler = (event) => {
+    setName(event.target.value);
+  }
+  const onBlurNameHandler = () => {
+    validateName();
+  }
+
+  const emailChangeHandler = (event) => {
+    setEmail(event.target.value);
+  }
+  const onBlurEmailHandler = () => {
+    validateEmail();
+  }
+
+  const phoneChangeHandler = (event) => {
+    setPhone(event.target.value);
+  }
+  const onBlurPhoneHandler = () => {
+    validatePhone();
   }
 
   const validateForm = () => {
-    setIsFormValid(name.trim() !== "" && email.trim() !== "" && phone.trim() !== "")
+    setIsFormValid(!errorName && !errorEmail && !errorPhone)
   }
 
-  const onClickHandler = () => {
-    setIsSubmitValid(!errorName && !errorEmail && !errorPhone)
-  }
+  useEffect(() => {
+    validateForm();
+  }, [errorName, errorEmail, errorPhone])
 
   return (
     <div id="contact" className={classesContact.contactContainer}>
@@ -92,9 +98,8 @@ const Contact = () => {
         <div className={classesContact.bottomLine}></div>
       </div>
       <div className={classesContact.sendButtonContainer}>
-        <button style={{ opacity: isFormValid ? 1 : 0.5 }} onClick={onClickHandler} disabled={!isFormValid} className={classesContact.sendButton}>Send</button>
+        <button style={{ opacity: isFormValid ? 1 : 0.5 }} disabled={!isFormValid} className={classesContact.sendButton}>Send</button>
       </div>
-      {!isSubmitValid && <h4>Not all fields filled correctly! </h4>}
     </div>
   );
 };
