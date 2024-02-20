@@ -1,10 +1,9 @@
-import Contact from "./Components/Contact"
-import "./Components/globalStyles.css";
+import Accordian from "./Components/Accordian";
 
 const App = () => {
   return (
     <>
-      <Contact />
+      <Accordian />
     </>
   );
 };
