@@ -14,6 +14,7 @@ const Accordian = () => {
         setSelected("");
         const index = multiSelected.indexOf(dataId);
         const newArray = index === -1 ? [...multiSelected, dataId] : multiSelected.filter((item) => item !== dataId);
+        // const newArray = index === -1 ? multiSelected.push(dataId) : multiSelected.splice(index, 1);
         setMultiSelected(newArray);
     }
     const multiHandler = () => {
