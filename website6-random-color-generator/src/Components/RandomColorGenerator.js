@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./RandomColorGenerator.module.css"
 
 const RandomColorGenerator = () => {
     const [colorType, setColorType] = useState("HEX");
-    const [color, setColor] = useState("#000000");
+    const [color, setColor] = useState("#FFFFFF");
 
-    const setColorTypeHexHandler = () => {
-        setColorType("HEX");
+    const setColorTypeHandler = () => {
+        setColorType((prevColorType) => (prevColorType === "HEX" ? "RGB" : "HEX"));
     }
 
-    const setColorTypeRGBHandler = () => {
-        setColorType("RGB");
-    }
+    useEffect(() => {
+        setColor((colorType === "HEX") ? "#FFFFFF" : "rgb(256,256,256)")
+    }, [colorType]);
+
+    // const setColorTypeHexHandler = () => {
+    //     setColorType("HEX");
+    // }
+
+    // const setColorTypeRGBHandler = () => {
+    //     setColorType("RGB");
+    // }
 
     const randomize = (length) => {
         return Math.floor(Math.random() * length);
@@ -22,7 +30,6 @@ const RandomColorGenerator = () => {
         let hexColor = "#";
         for (let i = 0; i < 6; i++) {
             hexColor += hexValues[randomize(hexValues.length)];
-            console.log(hexColor);
         }
         setColor(hexColor);
     }
@@ -31,16 +38,16 @@ const RandomColorGenerator = () => {
         const r = randomize(256);
         const g = randomize(256);
         const b = randomize(256);
-        const rgbColor = `rgb(${r},${g},${b})`
+        const rgbColor = `rgb(${r},${g},${b})`;
         setColor(rgbColor);
-        console.log(rgbColor);
     }
 
     return (
         <div style={{ backgroundColor: color }} className={classes.wrapper}>
             <div className={classes.buttonContainer}>
-                <button onClick={setColorTypeHexHandler} className={classes.button}>Generate HEX Color</button>
-                <button onClick={setColorTypeRGBHandler} className={classes.button}>Generate RGB Color</button>
+                {/* <button onClick={setColorTypeHexHandler} className={classes.button}>Generate HEX Color</button>
+                <button onClick={setColorTypeRGBHandler} className={classes.button}>Generate RGB Color</button> */}
+                <button onClick={setColorTypeHandler} className={classes.button}>Generate {colorType === "HEX" ? "RGB" : "HEX"} Color</button>
                 <button onClick={(colorType === "HEX") ? generateRandomHexColorHandler : generateRandomRGBColorHandler} className={classes.button}>Generate random color</button>
             </div>
             <h1>{colorType}</h1>
