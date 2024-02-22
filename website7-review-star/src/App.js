@@ -1,9 +1,9 @@
-import RandomColorGenerator from "./Components/RandomColorGenerator"
+import StarReview from "./Components/StarReview";
 
 const App = () => {
   return (
     <>
-      <RandomColorGenerator />
+      <StarReview />
     </>
   );
 };
