@@ -1,9 +1,9 @@
-import StarReview from "./Components/StarReview";
+import ImageSlider from "./Components/ImageSlider"
 
 const App = () => {
   return (
     <>
-      <StarReview />
+      <ImageSlider url="https://picsum.photos/v2/list" page="1" limit="10" />
     </>
   );
 };
