@@ -98,7 +98,7 @@ const ImageSlider = ({ url, page = 1, limit = 5 }) => {
                 style={{
                   backgroundColor: index === currentImage ? "white" : "black",
                   boxShadow:
-                    index === circleHoveredIndex ? "0 0 7px black" : null,
+                    index === circleHoveredIndex ? "0 0 5px black" : null,
                 }}
                 onMouseEnter={() => setCircleHoveredIndex(index)}
                 onMouseLeave={() => setCircleHoveredIndex("")}
