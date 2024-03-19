@@ -1,9 +1,9 @@
-import LoadMoreData from "./Components/LoadMoreData";
+import TreeView from "./Components/TreeView";
 
 const App = () => {
   return (
     <>
-      <LoadMoreData />
+      <TreeView />
     </>
   );
 };
