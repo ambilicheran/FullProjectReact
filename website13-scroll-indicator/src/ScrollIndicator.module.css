@@ -1,0 +1,31 @@
+.topContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  z-index: 1;
+}
+
+.scrollProgressTrackingContainer {
+  width: 100%;
+  height: 10px;
+  background-color: cornflowerblue;
+}
+
+.currentProgressBar {
+  height: 10px;
+  background-color: rgb(3, 15, 15);
+  width: 0%;
+}
+
+.mainContainer {
+  align-items: center;
+  display: block;
+}
+
+.dataContainer {
+  text-align: center;
+  position: relative;
+  top: 100px;
+}

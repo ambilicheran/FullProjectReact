@@ -1,0 +1,42 @@
+.avatar {
+  border-radius: 50%;
+  width: 300px;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  margin: 16px;
+}
+
+button {
+  font-size: 16px;
+  padding: 8px;
+  margin: 16px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  font-size: 20px;
+  margin: 8px;
+}
