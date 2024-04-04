@@ -27,7 +27,11 @@ const TicTacToe = () => {
 
   const Square = ({ value, onClick }) => {
     return (
-      <button disabled={winner} onClick={onClick} className={classes.square}>
+      <button
+        disabled={winner !== ""}
+        onClick={onClick}
+        className={classes.square}
+      >
         {value}
       </button>
     );
